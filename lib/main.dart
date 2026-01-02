@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget{
           title: Text("Hello World"),
           ),
           body: Container(
+            padding: EdgeInsets.all(15),
             height: double.infinity,
             width: double.infinity,
             decoration: BoxDecoration(
@@ -26,14 +27,31 @@ class MyApp extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("First text "),
+                Text("First text ", 
+                style: TextStyle(
+                  fontSize: 28,
+                )),
                 Column(
                   children: [
-                    Text("Second text"),
+                    Image.asset("assets/images/flutter_image.png", 
+                    height: 100),
                     Text("Another text"),
                   ],
                 ), 
-                Text("Third text"),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("Data Row 1"),
+                      Text("Data Row 2"),
+                    ],
+                  )),
               ],
             ),
           ), 
